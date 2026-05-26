@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPORTX About Page</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* NAVBAR */
+
+    header{
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:1000;
+      background:rgba(0,0,0,0.4);
+      backdrop-filter:blur(10px);
+    }
+
+    .logo{
+      font-size:30px;
+      font-weight:bold;
+      color:#00e5ff;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:25px;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#00e5ff;
+    }
+
+    /* ABOUT SECTION */
+
+    .about-section{
+      width:100%;
+      min-height:100vh;
+      padding:140px 8% 100px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:60px;
+    }
+
+    .about-image{
+      width:45%;
+      animation:zoomIn 1.5s ease;
+    }
+
+    .about-image img{
+      width:100%;
+      border-radius:20px;
+      box-shadow:0 0 40px rgba(0,229,255,0.3);
+    }
+
+    .about-content{
+      width:50%;
+      animation:slideRight 1.5s ease;
+    }
+
+    .about-content h1{
+      font-size:55px;
+      margin-bottom:20px;
+      color:#00e5ff;
+    }
+
+    .about-content p{
+      font-size:18px;
+      line-height:1.8;
+      color:#d1d5db;
+      margin-bottom:20px;
+    }
+
+    .about-boxes{
+      display:flex;
+      gap:20px;
+      margin-top:30px;
+      flex-wrap:wrap;
+    }
+
+    .box{
+      background:#111827;
+      padding:25px;
+      border-radius:15px;
+      min-width:160px;
+      text-align:center;
+      transition:0.5s;
+    }
+
+    .box:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 25px rgba(0,229,255,0.4);
+    }
+
+    .box h2{
+      color:#00e5ff;
+      font-size:35px;
+      margin-bottom:10px;
+    }
+
+    .box span{
+      color:white;
+    }
+
+    .about-btn{
+      display:inline-block;
+      margin-top:35px;
+      padding:14px 35px;
+      background:#00e5ff;
+      color:black;
+      text-decoration:none;
+      border-radius:40px;
+      font-weight:bold;
+      transition:0.4s;
+    }
+
+    .about-btn:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 30px #00e5ff;
+    }
+
+    /* ANIMATIONS */
+
+    @keyframes slideRight{
+      from{
+        opacity:0;
+        transform:translateX(100px);
+      }
+      to{
+        opacity:1;
+        transform:translateX(0);
+      }
+    }
+
+    @keyframes zoomIn{
+      from{
+        opacity:0;
+        transform:scale(0.7);
+      }
+      to{
+        opacity:1;
+        transform:scale(1);
+      }
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
+
+      header{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .about-section{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .about-image,
+      .about-content{
+        width:100%;
+      }
+
+      .about-content h1{
+        font-size:40px;
+      }
+
+      .about-boxes{
+        justify-content:center;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <header>
+
+    <div class="logo">VANS SPORTS CLUB</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="spclubabout.html">About</a>
+      <a href="spclubteams.html">Teams</a>
+      <a href="spclubgallery.html">Gallery</a>
+      <a href="spclubcontact.html">Contact</a>
+    </nav>
+
+  </header>
+
+  <!-- ABOUT SECTION -->
+
+  <section class="about-section">
+
+    <div class="about-image">
+      <img src="about.jfif" alt="">
+    </div>
+
+    <div class="about-content">
+
+      <h1>About Our Club</h1>
+
+      <p>
+        VANS SPORTS Club is one of the leading professional sports clubs
+        focused on developing athletes with world-class training,
+        modern facilities, and expert coaching.
+      </p>
+
+      <p>
+        We provide SILAMBAM, BOXING, fitness training, and more
+        championship-level practice sessions for all age groups.
+      </p>
+
+      <div class="about-boxes">
+
+        <div class="box">
+          <h2>10+</h2>
+          <span>Years Experience</span>
+        </div>
+
+        <div class="box">
+          <h2>50+</h2>
+          <span>Championship Wins</span>
+        </div>
+
+        <div class="box">
+          <h2>100+</h2>
+          <span>Active Players</span>
+        </div>
+
+      </div>
+
+      <a href="#" class="about-btn">Read More</a>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
